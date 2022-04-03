@@ -1,0 +1,276 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+
+.sort-card {
+    font-family: 'Poppins';
+    height: auto;
+    width: calc(100% - 10px);
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.sorting-container {
+    height: 650px;
+    max-height: 95vh;
+    width: 100%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    background: white;
+    border-radius: 8px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    user-select: none;
+}
+
+.sorting-legend {
+    position: relative;
+    width: 4.3%;
+    height: 100%;
+    margin-right: 0.5%;
+    display: inline-block;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+
+    border-right: solid 1px gray;
+}
+.sorting-table {
+    position: relative;
+    width: 95%;
+    height: 100%;
+    display: inline-block;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.up-horizontal {
+    position: absolute;
+    background-color: gray;
+    width: 45%;
+    height: 1px;
+    top: 0;
+    right: -2px;
+}
+
+.down-horizontal {
+    position: absolute;
+    background-color: gray;
+    width: 45%;
+    height: 1px;
+    bottom: 0;
+    right: -2px;
+}
+
+.legend-element {
+    text-align: right;
+    width: 85%;
+    font-size: 14px;
+    position: absolute;
+}
+
+.legend-4 {
+    top: 0;
+    right: 2px;
+}
+
+.legend-3 {
+    bottom: 75%;
+    right: 2px;
+}
+
+.legend-2 {
+    bottom: 50%;
+    right: 2px;
+}
+
+.legend-1 {
+    bottom: 25%;
+    right: 2px;
+}
+
+.legend-0 {
+    bottom: 0;
+    right: 2px;
+}
+
+
+
+.sorting-block {
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    background-color: #99ff66;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+
+    transition: all 0.1s;
+}
+.sorting-block:hover .sorting-block-popup {
+    opacity: 1;
+    transform: translate(-50%, -35px);
+}
+.sorting-block-popup {
+    font-weight: 600;
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+    border-radius: 4px;
+    padding: 5px;
+
+    z-index: 10;
+    transition: all 0.2s;
+}
+
+.sorting-block>span {
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.sort-settings {
+    margin: 25px 0 25px 0;
+}
+.sort-input-block {
+    display: inline-block;
+    position: relative;
+
+    margin-right: 25px;
+}
+.sort-input-block>input {
+    font-size: 22px;
+
+    height: 26px;
+    width: 75px;
+    border: none;
+    outline: none;
+
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.input-label {
+    font-size: 12px;
+    position: absolute;
+    top: -20px;
+}
+
+
+.randomize-button {
+    display: inline-block;
+    height: 26px;
+    width: auto;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    text-align: center;
+    border-radius: 4px;
+
+    font-weight: 600;
+    border: solid 2px #4ce600;
+    color: #4ce600;
+}
+
+.sort-run {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 50px 0 25px 0;
+}
+
+.sort-button {
+    position: relative;
+
+    height: 26px;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+
+    text-align: center;
+    border-radius: 4px;
+
+    font-weight: 600;
+    border: solid 2px #4ce600;
+    color: #4ce600;
+}
+
+.stick-right {
+    float: right;
+}
+
+.speed-input>input {
+    width: 120px;
+}
+
+.randomize-button:hover, .sort-button:hover {
+    cursor: pointer;
+    background-color: #ddffcc;
+}
+
+.sort-run>select {
+    font-size: 22px;
+    font-weight: 500;
+    width: 215px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 4px;
+}
+
+.error-msg {
+    user-select: none;
+    position: absolute;
+    text-align: center;
+
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 4px;
+    background-color: #ff4d4d;
+
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s;
+}
+
+
+
+.inactive-button:hover {
+    background-color: #cccccc;
+}
+.inactive-cursor:hover {
+    cursor: not-allowed;
+}
+.inactive-sort-button:hover {
+    background-color: #ff9999;
+}
