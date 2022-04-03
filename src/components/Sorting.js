@@ -22,6 +22,7 @@ function Sorting() {
 	const [amount, setAmount] = useState(10)
 
 	const [currentAlgorithm, setCurrentAlgorithm] = useState("bubble")
+	
 	const [currentSpeed, setCurrentSpeed] = useState(500)
 
 	const [sortingTable, setSortingTable] = useState([])
